@@ -21,7 +21,6 @@ enum ChessFigure {
     case king(color: String, position: (column: String, row: Int))
 }
 
-
 let table = [ChessFigure.pawn(color: "white", position: ("A", 2)),
              ChessFigure.pawn(color: "white", position: ("B", 2)),]
 
@@ -130,7 +129,6 @@ func chessPawnsBlack(fig: ChessFigure, color: String) -> [ChessFigure] {
 }
 print(chessPawnsBlack(fig: .pawn(color: "black", position: (column: "A", row: 7)), color: "black"))
 
-
 func chessBishopBlack(fig: ChessFigure, color: String) -> [ChessFigure] {
     let directions = [1: "C", 2: "F"]
     var figArray: [ChessFigure] = []
@@ -145,7 +143,6 @@ func chessBishopBlack(fig: ChessFigure, color: String) -> [ChessFigure] {
     }
 }
 print(chessBishopBlack(fig: .bishop(color: "black", position: (column: "A", row: 8)), color: "black"))
-
 
 func chessKnightBlack(fig: ChessFigure, color: String) -> [ChessFigure] {
     let directions = [1: "B", 2: "G"]
@@ -207,13 +204,8 @@ func chessKingBlack(fig: ChessFigure, color: String) -> [ChessFigure] {
 }
 print(chessKingBlack(fig: .king(color: "black", position: (column: "A", row: 1)), color: "black"))
 
-//===============================================================================================================
-
 //the second exercise
 // Создать функцию, которая принимает массив опциональных чисел, а возвращает массив не опциональных чисел
-
-
-
 
 func acceptArrayOptionalNumbers(numbers: [Int?]) -> [Int] {
     
@@ -227,8 +219,6 @@ func acceptArrayOptionalNumbers(numbers: [Int?]) -> [Int] {
     return notOptionalArray
 }
 acceptArrayOptionalNumbers(numbers: [3])
-
-//===============================================================================================================
 
 //the third exercise
 
@@ -244,5 +234,3 @@ let sorting: [Int] = sortStudents(arrayForSort: students.marks) { numbers in
     return students.marks.sorted(by: >)
 }
 print(sorting)
-
-
